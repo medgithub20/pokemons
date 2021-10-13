@@ -14,4 +14,4 @@ La collection Postman se trouve à la racine du projet sous le nom : `pokemons.p
 
 Pour lancer le projet il faut :   
 - se placer dans la racine du projet   
-- exécuter la commande suivant pour lancer Spring Boot : `./mvnw clean spring-boot:run`  
+- exécuter la commande suivant pour lancer Spring Boot : `.\mvnw clean spring-boot:run`  
