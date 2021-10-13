@@ -17,7 +17,7 @@ public class PokemonControllerList {
 	  }
 	
     @GetMapping("/pokemonlist")
-    public ModelAndView displayArticle(Map<String, Object> model) {
+    public ModelAndView displayList(Map<String, Object> model) {
 
         List<Pokemon> pokemons = repository.findAll();
         
