@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Liste de Pokémon</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-
-<div class="container">
-	  <table>
-	  <tr>
-	    <th>Name</th>
-	    <th>Type1</th>
-	    <th>Type2</th>
-	    <th>Total</th>
-	    <th>HP</th>
-	    <th>Attack</th>
-	    <th>Defense</th>
-	    <th>Sp.Atk</th>
-	    <th>Sp.Def</th>
-	    <th>Speed</th>
-	    <th>Generation</th>
-	    <th>Legendary</th>
-	  </tr>
-    
-	  {{>layout/pokemon}}
-	    
-	  </table>
-</div>
-
-
-</body>
+   <head>
+      <title>Liste de Pokémon</title>
+      <style>
+         table, th, td {
+         border: 1px solid white;
+         border-collapse: collapse;
+         }
+         th, td {
+         background-color: #96D4D4;
+         padding: 15px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <table>
+            <tr>
+               <th>Name</th>
+               <th>Type1</th>
+               <th>Type2</th>
+               <th>Total</th>
+               <th>HP</th>
+               <th>Attack</th>
+               <th>Defense</th>
+               <th>Sp.Atk</th>
+               <th>Sp.Def</th>
+               <th>Speed</th>
+               <th>Generation</th>
+               <th>Legendary</th>
+            </tr>
+            <div class="starter-template">
+               {{#pokemons}}
+               <tr>
+                  <td>{{name}}</td>
+                  <td>{{type1}}</td>
+                  <td>{{type2}}</td>
+                  <td>{{total}}</td>
+                  <td>{{hp}}</td>
+                  <td>{{attack}}</td>
+                  <td>{{defense}}</td>
+                  <td>{{spatk}}</td>
+                  <td>{{spdef}}</td>
+                  <td>{{speed}}</td>
+                  <td>{{generation}}</td>
+                  <td>{{legendary}}</td>
+               </tr>
+               {{/pokemons}}
+            </div>
+         </table>
+      </div>
+      <div class="container">
+         <table>
+            <tr>
+               {{#navigation}}
+               <td> <a href="{{endPoint}} {{.}}">{{.}}</a> </td>
+               {{/navigation}}
+            </tr>
+         </table>
+      </div>
+   </body>
 </html>
-
